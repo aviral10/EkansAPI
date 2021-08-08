@@ -263,7 +263,7 @@ app.use(express.json());    // to support JSON-encoded bodies
 app.use(express.urlencoded()); //to support url encoding
 
 
-
+// Front page display
 app.get('/hello', (req,res) => {
     reset();
     // console.log(grid);
@@ -276,10 +276,12 @@ app.get('/hello', (req,res) => {
     res.render("index.html");
 });
 
+// GET request
 app.get('/gridState', (req,res) => {
     res.json(grid);
 });
 
+// POST request
 app.post('/advance', function(req, res) {
     // console.log(typeof req.body['snake'],typeof req.body['food']);
     step(parseInt(req.body['snake']), parseInt(req.body['food']));
