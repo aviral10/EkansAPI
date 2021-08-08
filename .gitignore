@@ -1,0 +1,5 @@
+client_side/node_modules/
+server_side/node_modules/
+.vscode/
+# **/*.js
+# **/*.js.map
